@@ -1,0 +1,403 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E12BCA3B26A47D94007513D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12BCA3A26A47D94007513D4 /* AppDelegate.swift */; };
+		E12BCA4426A47D95007513D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E12BCA4326A47D95007513D4 /* Assets.xcassets */; };
+		E12BCA4726A47D95007513D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E12BCA4526A47D95007513D4 /* LaunchScreen.storyboard */; };
+		E12BCA5526A47EB4007513D4 /* WaterfallLayoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12BCA4F26A47EB4007513D4 /* WaterfallLayoutViewModel.swift */; };
+		E12BCA5626A47EB4007513D4 /* WaterfallLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12BCA5026A47EB4007513D4 /* WaterfallLayoutViewController.swift */; };
+		E12BCA5826A47EB4007513D4 /* WaterfallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12BCA5226A47EB4007513D4 /* WaterfallCell.swift */; };
+		E12BCA5926A47EB4007513D4 /* WaterfallItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12BCA5326A47EB4007513D4 /* WaterfallItem.swift */; };
+		E12BCA5C26A47F54007513D4 /* Niagara in Frameworks */ = {isa = PBXBuildFile; productRef = E12BCA5B26A47F54007513D4 /* Niagara */; };
+		E12BCA5F26A4802E007513D4 /* ReusableView in Frameworks */ = {isa = PBXBuildFile; productRef = E12BCA5E26A4802E007513D4 /* ReusableView */; };
+		E12BCA6226A4814D007513D4 /* UIKitHelpers in Frameworks */ = {isa = PBXBuildFile; productRef = E12BCA6126A4814D007513D4 /* UIKitHelpers */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E12BCA3726A47D94007513D4 /* NiagaraDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NiagaraDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E12BCA3A26A47D94007513D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E12BCA4326A47D95007513D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E12BCA4626A47D95007513D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E12BCA4826A47D95007513D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E12BCA4F26A47EB4007513D4 /* WaterfallLayoutViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterfallLayoutViewModel.swift; sourceTree = "<group>"; };
+		E12BCA5026A47EB4007513D4 /* WaterfallLayoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterfallLayoutViewController.swift; sourceTree = "<group>"; };
+		E12BCA5226A47EB4007513D4 /* WaterfallCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterfallCell.swift; sourceTree = "<group>"; };
+		E12BCA5326A47EB4007513D4 /* WaterfallItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterfallItem.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E12BCA3426A47D94007513D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E12BCA6226A4814D007513D4 /* UIKitHelpers in Frameworks */,
+				E12BCA5F26A4802E007513D4 /* ReusableView in Frameworks */,
+				E12BCA5C26A47F54007513D4 /* Niagara in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E12BCA2E26A47D94007513D4 = {
+			isa = PBXGroup;
+			children = (
+				E12BCA3926A47D94007513D4 /* NiagaraDemo */,
+				E12BCA3826A47D94007513D4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E12BCA3826A47D94007513D4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E12BCA3726A47D94007513D4 /* NiagaraDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E12BCA3926A47D94007513D4 /* NiagaraDemo */ = {
+			isa = PBXGroup;
+			children = (
+				E12BCA3A26A47D94007513D4 /* AppDelegate.swift */,
+				E12BCA5026A47EB4007513D4 /* WaterfallLayoutViewController.swift */,
+				E12BCA4F26A47EB4007513D4 /* WaterfallLayoutViewModel.swift */,
+				E12BCA5226A47EB4007513D4 /* WaterfallCell.swift */,
+				E12BCA5326A47EB4007513D4 /* WaterfallItem.swift */,
+				E12BCA4326A47D95007513D4 /* Assets.xcassets */,
+				E12BCA4526A47D95007513D4 /* LaunchScreen.storyboard */,
+				E12BCA4826A47D95007513D4 /* Info.plist */,
+			);
+			path = NiagaraDemo;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E12BCA3626A47D94007513D4 /* NiagaraDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E12BCA4B26A47D95007513D4 /* Build configuration list for PBXNativeTarget "NiagaraDemo" */;
+			buildPhases = (
+				E12BCA3326A47D94007513D4 /* Sources */,
+				E12BCA3426A47D94007513D4 /* Frameworks */,
+				E12BCA3526A47D94007513D4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NiagaraDemo;
+			packageProductDependencies = (
+				E12BCA5B26A47F54007513D4 /* Niagara */,
+				E12BCA5E26A4802E007513D4 /* ReusableView */,
+				E12BCA6126A4814D007513D4 /* UIKitHelpers */,
+			);
+			productName = NiagaraDemo;
+			productReference = E12BCA3726A47D94007513D4 /* NiagaraDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E12BCA2F26A47D94007513D4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					E12BCA3626A47D94007513D4 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+				};
+			};
+			buildConfigurationList = E12BCA3226A47D94007513D4 /* Build configuration list for PBXProject "NiagaraDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E12BCA2E26A47D94007513D4;
+			packageReferences = (
+				E12BCA5A26A47F54007513D4 /* XCRemoteSwiftPackageReference "Niagara" */,
+				E12BCA5D26A4802E007513D4 /* XCRemoteSwiftPackageReference "ReusableView" */,
+				E12BCA6026A4814D007513D4 /* XCRemoteSwiftPackageReference "UIKitHelpers" */,
+			);
+			productRefGroup = E12BCA3826A47D94007513D4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E12BCA3626A47D94007513D4 /* NiagaraDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E12BCA3526A47D94007513D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E12BCA4726A47D95007513D4 /* LaunchScreen.storyboard in Resources */,
+				E12BCA4426A47D95007513D4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E12BCA3326A47D94007513D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E12BCA5826A47EB4007513D4 /* WaterfallCell.swift in Sources */,
+				E12BCA5626A47EB4007513D4 /* WaterfallLayoutViewController.swift in Sources */,
+				E12BCA5926A47EB4007513D4 /* WaterfallItem.swift in Sources */,
+				E12BCA3B26A47D94007513D4 /* AppDelegate.swift in Sources */,
+				E12BCA5526A47EB4007513D4 /* WaterfallLayoutViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E12BCA4526A47D95007513D4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E12BCA4626A47D95007513D4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E12BCA4926A47D95007513D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E12BCA4A26A47D95007513D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E12BCA4C26A47D95007513D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R487ZJ8FJN;
+				INFOPLIST_FILE = NiagaraDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.meghnagi.NiagaraDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E12BCA4D26A47D95007513D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R487ZJ8FJN;
+				INFOPLIST_FILE = NiagaraDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.meghnagi.NiagaraDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E12BCA3226A47D94007513D4 /* Build configuration list for PBXProject "NiagaraDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E12BCA4926A47D95007513D4 /* Debug */,
+				E12BCA4A26A47D95007513D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E12BCA4B26A47D95007513D4 /* Build configuration list for PBXNativeTarget "NiagaraDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E12BCA4C26A47D95007513D4 /* Debug */,
+				E12BCA4D26A47D95007513D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E12BCA5A26A47F54007513D4 /* XCRemoteSwiftPackageReference "Niagara" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lucamegh/Niagara";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		E12BCA5D26A4802E007513D4 /* XCRemoteSwiftPackageReference "ReusableView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lucamegh/ReusableView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		E12BCA6026A4814D007513D4 /* XCRemoteSwiftPackageReference "UIKitHelpers" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lucamegh/UIKitHelpers";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E12BCA5B26A47F54007513D4 /* Niagara */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E12BCA5A26A47F54007513D4 /* XCRemoteSwiftPackageReference "Niagara" */;
+			productName = Niagara;
+		};
+		E12BCA5E26A4802E007513D4 /* ReusableView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E12BCA5D26A4802E007513D4 /* XCRemoteSwiftPackageReference "ReusableView" */;
+			productName = ReusableView;
+		};
+		E12BCA6126A4814D007513D4 /* UIKitHelpers */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E12BCA6026A4814D007513D4 /* XCRemoteSwiftPackageReference "UIKitHelpers" */;
+			productName = UIKitHelpers;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = E12BCA2F26A47D94007513D4 /* Project object */;
+}

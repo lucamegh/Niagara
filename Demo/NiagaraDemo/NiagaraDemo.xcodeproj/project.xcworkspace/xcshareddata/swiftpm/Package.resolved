@@ -1,0 +1,34 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Niagara",
+        "repositoryURL": "https://github.com/lucamegh/Niagara",
+        "state": {
+          "branch": null,
+          "revision": "5adbfdd8ac717f381788e26081f67f869937d375",
+          "version": "1.0.0"
+        }
+      },
+      {
+        "package": "ReusableView",
+        "repositoryURL": "https://github.com/lucamegh/ReusableView",
+        "state": {
+          "branch": null,
+          "revision": "0fb880a56db8bd0894ef8298b07afc96e0f5397a",
+          "version": "1.0.0"
+        }
+      },
+      {
+        "package": "UIKitHelpers",
+        "repositoryURL": "https://github.com/lucamegh/UIKitHelpers",
+        "state": {
+          "branch": null,
+          "revision": "71d6308778c466e696759781b476b7df5c070ff0",
+          "version": "1.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
