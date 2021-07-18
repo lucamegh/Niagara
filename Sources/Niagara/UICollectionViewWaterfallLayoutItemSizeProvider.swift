@@ -4,7 +4,6 @@
  * MIT license, see LICENSE file for details
  */
 
-import XCTest
-@testable import Niagara
+import UIKit
 
-final class NiagaraTests: XCTestCase {}
+public typealias UICollectionViewWaterfallLayoutItemSizeProvider = (IndexPath) -> CGSize
