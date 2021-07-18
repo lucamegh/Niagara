@@ -8,6 +8,21 @@ import UIKit
 
 public extension UICollectionViewCompositionalLayout {
     
+    static func waterfall(
+        columnCount: Int = 2,
+        spacing: CGFloat = 8,
+        contentInsetsReference: UIContentInsetsReference = .automatic,
+        itemSizeProvider: @escaping UICollectionViewWaterfallLayoutItemSizeProvider
+    ) -> UICollectionViewCompositionalLayout {
+        let configuration = UICollectionLayoutWaterfallConfiguration(
+            columnCount: columnCount,
+            spacing: spacing,
+            contentInsetsReference: contentInsetsReference,
+            itemSizeProvider: itemSizeProvider
+        )
+        return waterfall(configuration: configuration)
+    }
+    
     static func waterfall(configuration: UICollectionLayoutWaterfallConfiguration) -> UICollectionViewCompositionalLayout {
         
         var numberOfItems: (Int) -> Int = { _ in 0 }
