@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7468710928ABDD93002F1F75 /* Niagara in Frameworks */ = {isa = PBXBuildFile; productRef = 7468710828ABDD93002F1F75 /* Niagara */; };
 		E12BCA3B26A47D94007513D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12BCA3A26A47D94007513D4 /* AppDelegate.swift */; };
 		E12BCA4426A47D95007513D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E12BCA4326A47D95007513D4 /* Assets.xcassets */; };
 		E12BCA4726A47D95007513D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E12BCA4526A47D95007513D4 /* LaunchScreen.storyboard */; };
@@ -14,12 +15,12 @@
 		E12BCA5626A47EB4007513D4 /* WaterfallLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12BCA5026A47EB4007513D4 /* WaterfallLayoutViewController.swift */; };
 		E12BCA5826A47EB4007513D4 /* WaterfallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12BCA5226A47EB4007513D4 /* WaterfallCell.swift */; };
 		E12BCA5926A47EB4007513D4 /* WaterfallItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12BCA5326A47EB4007513D4 /* WaterfallItem.swift */; };
-		E12BCA5C26A47F54007513D4 /* Niagara in Frameworks */ = {isa = PBXBuildFile; productRef = E12BCA5B26A47F54007513D4 /* Niagara */; };
 		E12BCA5F26A4802E007513D4 /* ReusableView in Frameworks */ = {isa = PBXBuildFile; productRef = E12BCA5E26A4802E007513D4 /* ReusableView */; };
 		E12BCA6226A4814D007513D4 /* UIKitHelpers in Frameworks */ = {isa = PBXBuildFile; productRef = E12BCA6126A4814D007513D4 /* UIKitHelpers */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7468710628ABDD35002F1F75 /* Niagara */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Niagara; path = ../..; sourceTree = "<group>"; };
 		E12BCA3726A47D94007513D4 /* NiagaraDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NiagaraDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E12BCA3A26A47D94007513D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E12BCA4326A47D95007513D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -36,20 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7468710928ABDD93002F1F75 /* Niagara in Frameworks */,
 				E12BCA6226A4814D007513D4 /* UIKitHelpers in Frameworks */,
 				E12BCA5F26A4802E007513D4 /* ReusableView in Frameworks */,
-				E12BCA5C26A47F54007513D4 /* Niagara in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7468710528ABDD35002F1F75 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				7468710628ABDD35002F1F75 /* Niagara */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		7468710728ABDD93002F1F75 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E12BCA2E26A47D94007513D4 = {
 			isa = PBXGroup;
 			children = (
+				7468710528ABDD35002F1F75 /* Packages */,
 				E12BCA3926A47D94007513D4 /* NiagaraDemo */,
 				E12BCA3826A47D94007513D4 /* Products */,
+				7468710728ABDD93002F1F75 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -93,9 +111,9 @@
 			);
 			name = NiagaraDemo;
 			packageProductDependencies = (
-				E12BCA5B26A47F54007513D4 /* Niagara */,
 				E12BCA5E26A4802E007513D4 /* ReusableView */,
 				E12BCA6126A4814D007513D4 /* UIKitHelpers */,
+				7468710828ABDD93002F1F75 /* Niagara */,
 			);
 			productName = NiagaraDemo;
 			productReference = E12BCA3726A47D94007513D4 /* NiagaraDemo.app */;
@@ -125,7 +143,6 @@
 			);
 			mainGroup = E12BCA2E26A47D94007513D4;
 			packageReferences = (
-				E12BCA5A26A47F54007513D4 /* XCRemoteSwiftPackageReference "Niagara" */,
 				E12BCA5D26A4802E007513D4 /* XCRemoteSwiftPackageReference "ReusableView" */,
 				E12BCA6026A4814D007513D4 /* XCRemoteSwiftPackageReference "UIKitHelpers" */,
 			);
@@ -355,14 +372,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		E12BCA5A26A47F54007513D4 /* XCRemoteSwiftPackageReference "Niagara" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/lucamegh/Niagara";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
 		E12BCA5D26A4802E007513D4 /* XCRemoteSwiftPackageReference "ReusableView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/lucamegh/ReusableView";
@@ -382,9 +391,8 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		E12BCA5B26A47F54007513D4 /* Niagara */ = {
+		7468710828ABDD93002F1F75 /* Niagara */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = E12BCA5A26A47F54007513D4 /* XCRemoteSwiftPackageReference "Niagara" */;
 			productName = Niagara;
 		};
 		E12BCA5E26A4802E007513D4 /* ReusableView */ = {

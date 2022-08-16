@@ -72,6 +72,9 @@ class WaterfallLayoutViewModel {
             columnCount: columnCountSubject.value,
             spacing: spacingSubject.value,
             contentInsetsReference: contentInsetsReferenceSubject.value,
+            numberOfItems: { [unowned self] in
+                self.itemsSubject.value.count
+            },
             itemSizeProvider: { [itemsSubject] indexPath in
                 itemsSubject.value[indexPath.row].size
             }

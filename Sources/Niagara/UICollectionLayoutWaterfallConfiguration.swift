@@ -15,16 +15,20 @@ public struct UICollectionLayoutWaterfallConfiguration {
     public var contentInsetsReference: UIContentInsetsReference
     
     public var itemSizeProvider: UICollectionViewWaterfallLayoutItemSizeProvider
+    
+    public let numberOfItems: () -> Int
         
     public init(
         columnCount: Int = 2,
         spacing: CGFloat = 8,
         contentInsetsReference: UIContentInsetsReference = .automatic,
+        numberOfItems: @escaping () -> Int,
         itemSizeProvider: @escaping UICollectionViewWaterfallLayoutItemSizeProvider
     ) {
         self.columnCount = columnCount
         self.spacing = spacing
         self.contentInsetsReference = contentInsetsReference
         self.itemSizeProvider = itemSizeProvider
+        self.numberOfItems = numberOfItems
     }
 }
