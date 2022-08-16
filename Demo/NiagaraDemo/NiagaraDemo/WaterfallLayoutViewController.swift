@@ -37,7 +37,13 @@ final class WaterfallLayoutViewController: UICollectionViewController {
         navigationItem.leftBarButtonItem = editLayoutButtonItem
         
         viewModel.waterfallLayoutConfiguration.sink { [unowned self] configuration in
-            let layout = UICollectionViewCompositionalLayout.waterfall(configuration: configuration)
+            let layout = UICollectionViewCompositionalLayout { sectionIndex, enviroment in
+                UICollectionViewCompositionalLayout.waterfallSection(
+                    configuration: configuration,
+                    environment: enviroment,
+                    sectionIndex: sectionIndex
+                )
+            }
             collectionView.setCollectionViewLayout(layout, animated: true)
         }.store(in: &cancellables)
         

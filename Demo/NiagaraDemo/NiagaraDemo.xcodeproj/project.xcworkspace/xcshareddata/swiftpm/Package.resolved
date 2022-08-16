@@ -2,15 +2,6 @@
   "object": {
     "pins": [
       {
-        "package": "Niagara",
-        "repositoryURL": "https://github.com/lucamegh/Niagara",
-        "state": {
-          "branch": null,
-          "revision": "5adbfdd8ac717f381788e26081f67f869937d375",
-          "version": "1.0.0"
-        }
-      },
-      {
         "package": "ReusableView",
         "repositoryURL": "https://github.com/lucamegh/ReusableView",
         "state": {

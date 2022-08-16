@@ -16,23 +16,27 @@ class LayoutItemProvider {
     
     private let spacing: CGFloat
     
-    private let contentSize: CGSize
+    private let collectionWidth: CGFloat
     
     init(
         configuration: UICollectionLayoutWaterfallConfiguration,
-        environment: NSCollectionLayoutEnvironment
+        collectionWidth: CGFloat
     ) {
         self.columnHeights = [CGFloat](repeating: 0, count: configuration.columnCount)
         self.columnCount = CGFloat(configuration.columnCount)
         self.itemSizeProvider = configuration.itemSizeProvider
         self.spacing = configuration.spacing
-        self.contentSize = environment.container.effectiveContentSize
+        self.collectionWidth = collectionWidth
     }
     
     func item(for indexPath: IndexPath) -> NSCollectionLayoutGroupCustomItem {
         let frame = frame(for: indexPath)
         columnHeights[columnIndex()] = frame.maxY + spacing
         return NSCollectionLayoutGroupCustomItem(frame: frame)
+    }
+    
+    func maxColumnHeight() -> CGFloat {
+        return columnHeights.max() ?? 0
     }
     
     private func frame(for indexPath: IndexPath) -> CGRect {
@@ -48,14 +52,14 @@ class LayoutItemProvider {
     }
     
     private func itemSize(for indexPath: IndexPath) -> CGSize {
-        let width = itemWidth()
+        let width = columnWidth()
         let height = itemHeight(for: indexPath, itemWidth: width)
         return CGSize(width: width, height: height)
     }
     
-    private func itemWidth() -> CGFloat {
+    private func columnWidth() -> CGFloat {
         let spacing = (columnCount - 1) * spacing
-        return (contentSize.width - spacing) / columnCount
+        return (collectionWidth - spacing) / columnCount
     }
     
     private func itemHeight(for indexPath: IndexPath, itemWidth: CGFloat) -> CGFloat {

@@ -8,52 +8,58 @@ import UIKit
 
 public extension UICollectionViewCompositionalLayout {
     
-    static func waterfall(
+    static func waterfallSection(
         columnCount: Int = 2,
         spacing: CGFloat = 8,
         contentInsetsReference: UIContentInsetsReference = .automatic,
+        numberOfItems: @escaping () -> Int,
+        environment: NSCollectionLayoutEnvironment,
+        sectionIndex: Int,
         itemSizeProvider: @escaping UICollectionViewWaterfallLayoutItemSizeProvider
-    ) -> UICollectionViewCompositionalLayout {
+    ) -> NSCollectionLayoutSection {
         let configuration = UICollectionLayoutWaterfallConfiguration(
             columnCount: columnCount,
             spacing: spacing,
             contentInsetsReference: contentInsetsReference,
+            numberOfItems: numberOfItems,
             itemSizeProvider: itemSizeProvider
         )
-        return waterfall(configuration: configuration)
+        
+        return waterfallSection(
+            configuration: configuration,
+            environment: environment,
+            sectionIndex: sectionIndex
+        )
     }
     
-    static func waterfall(configuration: UICollectionLayoutWaterfallConfiguration) -> UICollectionViewCompositionalLayout {
+    static func waterfallSection(
+        configuration: UICollectionLayoutWaterfallConfiguration,
+        environment: NSCollectionLayoutEnvironment,
+        sectionIndex: Int
+    ) -> NSCollectionLayoutSection {
+        var items = [NSCollectionLayoutGroupCustomItem]()
+        let itemProvider = LayoutItemProvider(
+            configuration: configuration,
+            collectionWidth: environment.container.contentSize.width
+        )
         
-        var numberOfItems: (Int) -> Int = { _ in 0 }
-        
-        let layout = UICollectionViewCompositionalLayout { section, environment in
-            
-            let groupLayoutSize = NSCollectionLayoutSize(
-                widthDimension: .fractionalWidth(1),
-                heightDimension: .estimated(environment.container.effectiveContentSize.height)
-            )
-            
-            let group = NSCollectionLayoutGroup.custom(layoutSize: groupLayoutSize) { environment in
-                let itemProvider = LayoutItemProvider(configuration: configuration, environment: environment)
-                var items = [NSCollectionLayoutGroupCustomItem]()
-                for i in 0..<numberOfItems(section) {
-                    let indexPath = IndexPath(item: i, section: section)
-                    let item = itemProvider.item(for: indexPath)
-                    items.append(item)
-                }
-                return items
-            }
-            
-            let section = NSCollectionLayoutSection(group: group)
-            section.contentInsetsReference = configuration.contentInsetsReference
-            return section
+        for i in 0..<configuration.numberOfItems() {
+            let indexPath = IndexPath(item: i, section: sectionIndex)
+            let item = itemProvider.item(for: indexPath)
+            items.append(item)
         }
         
-        numberOfItems = { [weak layout] in
-            layout?.collectionView?.numberOfItems(inSection: $0) ?? 0
+        let groupLayoutSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1),
+            heightDimension: .absolute(itemProvider.maxColumnHeight())
+        )
+        
+        let group = NSCollectionLayoutGroup.custom(layoutSize: groupLayoutSize) { _ in
+            return items
         }
         
-        return layout
+        let section = NSCollectionLayoutSection(group: group)
+        section.contentInsetsReference = configuration.contentInsetsReference
+        return section
     }
 }
